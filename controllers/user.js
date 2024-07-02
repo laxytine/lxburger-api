@@ -58,8 +58,8 @@ module.exports.registerUser = async (req, res) => {
     mailTransport().sendMail({
       from: "L&X Burger <L&X_Burger@gmail.com>",
       to: newUser.email,
-      subject: "Verify your email account",
-      html: `<h3>${OTP}</h3> \nis your authentication code. For your protection, do not share this code with anyone.`,
+      subject: "Your One-Time Password (OTP) for Verification",
+      html: `Your one-time password (OTP) for completing your verification is: \n<h3>${OTP}</h3> \nPlease use this code to complete your verification process. Note that this OTP is valid for 10 minutes from the time of this email. \nFor security reasons, do not share this OTP with anyone.`,
     });
 
     const result = await newUser.save();
