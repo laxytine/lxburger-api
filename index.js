@@ -26,8 +26,8 @@ const corsOptions = {
   origin: [
     "http://localhost:4000",
     "http://localhost:3000",
-    "http://120.28.169.95:3000",
-    "http://zuitt-bootcamp-prod-421-7218-canta.s3-website.us-east-1.amazonaws.com",
+    "https://lxburger.vercel.app",
+    "https://lxburger-justines-projects-5350056a.vercel.app/",
   ],
   credentials: true,
   optionsSuccessStatus: 200,
