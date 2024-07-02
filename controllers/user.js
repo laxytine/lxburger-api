@@ -59,7 +59,14 @@ module.exports.registerUser = async (req, res) => {
       from: "L&X Burger <L&X_Burger@gmail.com>",
       to: newUser.email,
       subject: "Your One-Time Password (OTP) for Verification",
-      html: `Your one-time password (OTP) for completing your verification is: \n<h3>${OTP}</h3> \nPlease use this code to complete your verification process. Note that this OTP is valid for 10 minutes from the time of this email. \nFor security reasons, do not share this OTP with anyone.`,
+      html: `
+              <p>Your one-time password (OTP) for completing your verification is:</p>
+              <h1>${OTP}</h1>
+              <p>Please use this code to complete your verification process.</p>
+              <p>Note Note that this OTP is valid for 10 minutes from the time of this email.</p>
+              <p>For security reasons, do not share this OTP with anyone.</p>
+              <p?Thank you!</p>
+            `,
     });
 
     const result = await newUser.save();
